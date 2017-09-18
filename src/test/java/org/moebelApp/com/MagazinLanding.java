@@ -19,6 +19,7 @@ public class MagazinLanding extends Base {
 		magazinIcon.click();
 		Thread.sleep(3000);
 		System.out.println("test messgae to check for git");
+		System.out.println("test messgae 11 to check for git");
 		WebElement catdropdown= driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"moebel.de:id/categoryLayout\")");
 		catdropdown.click();
 		Thread.sleep(5000);
