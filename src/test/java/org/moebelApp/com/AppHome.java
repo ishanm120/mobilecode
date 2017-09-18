@@ -39,7 +39,6 @@ public class AppHome extends Base {
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++	
 		//click on Essgruppen on Listing page
 
-		String str = "abc";
 		boolean found = false;
 		while (!found) {
 
@@ -48,7 +47,6 @@ public class AppHome extends Base {
 			for (WebElement ole : listingText) {
 				System.out.println(ole.getText());
 				if (ole.getText().equalsIgnoreCase("Essgruppen")) {
-					str = ole.getText();
 					
 					driver.tap(1, ole, 1000);
 					found = true;

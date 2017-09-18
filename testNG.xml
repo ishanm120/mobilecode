@@ -7,8 +7,8 @@
 
 		<classes>
 		    <class name="org.moebelApp.com.Base" />
-	  <class name="org.moebelApp.com.InspirationLanding" /> 
-		<!--  <class name="org.moebelApp.com.MagazinLanding" /> -->
+	  <!-- <class name="org.moebelApp.com.InspirationLanding" />  -->
+		 <class name="org.moebelApp.com.MagazinLanding" /> 
 		</classes>
 	</test>
 

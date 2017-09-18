@@ -11,15 +11,14 @@ public class MagazinLanding extends Base {
 	@Test
 	public static void landingToMagazin() throws InterruptedException{
 		Thread.sleep(3000);
-		//InspirationLanding iplanding= new InspirationLanding();
+		
 		InspirationLanding.landingtoInspiration();
-		//iplanding.landingtoInspiration();
+	
 		System.out.println("searching of magazin icon");
 		WebElement magazinIcon= driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"moebel.de:id/tittleMagazine\")");
 		magazinIcon.click();
 		Thread.sleep(3000);
-		System.out.println("test messgae to check for git");
-		System.out.println("test messgae 11 to check for git");
+		
 		WebElement catdropdown= driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"moebel.de:id/categoryLayout\")");
 		catdropdown.click();
 		Thread.sleep(5000);

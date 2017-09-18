@@ -12,13 +12,14 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 
 public class Base {
 
 	protected static AndroidDriver<WebElement> driver;
 
 	@BeforeMethod
-	public void AppLaunchMethod() throws MalformedURLException {
+	public void AppLaunchMethod() throws MalformedURLException, Exception {
 		System.err.println("applaunch method");
 		DesiredCapabilities cap = new DesiredCapabilities();
 
@@ -28,22 +29,24 @@ public class Base {
 		// cap.setCapability("deviceName", "92012825f6285347");
 		cap.setCapability("deviceName", "9885b53254514b534e");
 
-		// App Specifications
-  	      cap.setCapability("appActivity", "moebel.de.app.ui.activity.HomeActivity");
-	      cap.setCapability("appPackage", "moebel.de");
-
-		// to install new app
-	//	cap.setCapability("app", "E:\\Automationdata\\Appinum Softwares\\Appium_Files_Amit\\ExtractedApks\\moebel.apk");
-
-		// Launch app On Appium server
-
+		cap.setCapability("app", "E:\\Automationdata\\Appinum Softwares\\Appium_Files_Amit\\ExtractedApks\\moebel.apk");
+		// cap.setCapability("appPackage", "moebel.de");
+	
+		Common cmn= new Common();
+		cmn.waitAMoment(2000);
+		
 		driver = new AndroidDriver<WebElement>(new URL("http://0.0.0.0:4723/wd/hub"), cap);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.pressKeyCode(AndroidKeyCode.HOME); 
+		cap.setCapability("appActivity", "moebel.de.app.ui.activity.HomeActivity");
 
+
+		
 	}
-	
+
 	/*@Test
-	public void appinstalled(){
+	public void appinstalled() {
+	
 		System.out.println("app installed successfully");
 	}*/
 

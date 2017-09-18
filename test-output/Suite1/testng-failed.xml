@@ -3,12 +3,13 @@
 <suite name="Failed suite [Suite1]">
   <test name="Login(failed)">
     <classes>
-      <class name="org.moebelApp.com.InspirationLanding">
+      <class name="org.moebelApp.com.MagazinLanding">
         <methods>
-          <include name="landingtoInspiration"/>
+          <include name="closeApp"/>
+          <include name="landingToMagazin"/>
           <include name="AppLaunchMethod"/>
         </methods>
-      </class> <!-- org.moebelApp.com.InspirationLanding -->
+      </class> <!-- org.moebelApp.com.MagazinLanding -->
     </classes>
   </test> <!-- Login(failed) -->
 </suite> <!-- Failed suite [Suite1] -->
