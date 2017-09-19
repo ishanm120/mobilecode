@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="org.moebelApp.com.MagazinLanding">
+      <class name="org.moebelApp.com.MagazinLandingTest">
         <methods>
           <include name="closeApp"/>
-          <include name="landingToMagazin"/>
+          <include name="landingToMagazinTest"/>
           <include name="AppLaunchMethod"/>
         </methods>
-      </class> <!-- org.moebelApp.com.MagazinLanding -->
+      </class> <!-- org.moebelApp.com.MagazinLandingTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

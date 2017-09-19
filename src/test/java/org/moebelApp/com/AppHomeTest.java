@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidKeyCode;
 
-public class AppHome extends Base {
+public class AppHomeTest extends Base {
 
 	@Test
 	public void homePageverify() throws Exception {
