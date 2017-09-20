@@ -9,7 +9,7 @@ public class CategoryListingTest extends Base {
 	@Test
 	public void firstlevelCategory() throws Exception{
 		
-		String str = "abc";
+		
 		boolean found = false;
 		while (!found) {
 
@@ -18,7 +18,7 @@ public class CategoryListingTest extends Base {
 			for (WebElement ole : listingText) {
 				System.out.println(ole.getText());
 				if (ole.getText().equalsIgnoreCase("Essgruppen")) {
-					str = ole.getText();
+					
 					
 					driver.tap(1, ole, 1000);
 					found = true;

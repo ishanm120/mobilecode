@@ -6,7 +6,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.springframework.core.annotation.SynthesizedAnnotation;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -43,13 +42,13 @@ public class Base {
 
 		
 	}
-
-	/*@Test
+/*
+	@Test
 	public void appinstalled() {
 	
 		System.out.println("app installed successfully");
-	}*/
-
+	}
+*/
 	@AfterMethod
 	public void closeApp() {
 

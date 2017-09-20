@@ -4,27 +4,30 @@ import java.util.List;
 
 import org.openqa.selenium.WebElement;
 
-import io.appium.java_client.android.AndroidDriver;
-
 public class Common extends Base {
 
 	
 
 	public void clickByID(String id) {
 
-		//driver.findElementByAndroidUIAutomator("Uiselector().resourceId(\"moebel.de:id/navigation_inspiration\")").click();
-		
-		driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\""+id+"\")").click();
-		
-		/*WebElement inspire = driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"moebel.de:id/navigation_inspiration\")");
-		inspire.click();*/
+		driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"" + id + "\")").click();
+
 	}
 
 	public void clickByClass(String className) {
 
-		// driver.findElementByAndroidUIAutomator("Uiselector().resourceId(\"com.flipkart.android:id/btn_mlogin\")").click();
 		driver.findElementByAndroidUIAutomator("Uiselector().className(\"" + className + "\")").click();
 	}
+	
+	public void sendKeysEvent(String id, String searchkeyword) {
+		WebElement textBox= driver.findElementByAndroidUIAutomator("UiSelector().resourceId(\"" + id + "\")");
+		textBox.sendKeys(searchkeyword);
+		
+		
+
+	}
+	
+	
 
 	public void waitAMoment(int i) throws InterruptedException {
 

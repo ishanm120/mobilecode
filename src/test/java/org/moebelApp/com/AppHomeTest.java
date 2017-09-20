@@ -5,14 +5,15 @@ import java.util.List;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-import io.appium.java_client.android.AndroidKeyCode;
-
 public class AppHomeTest extends Base {
 
 	@Test
 	public void homePageverify() throws Exception {
-		System.err.println("homepage verify");
-		Thread.sleep(3000);
+		
+		
+		
+		
+		
 		// List<WebElement> lst=
 		// driver.findElementsByAndroidUIAutomator("UiSelector().className(\"android.widget.TextView\")");
 
