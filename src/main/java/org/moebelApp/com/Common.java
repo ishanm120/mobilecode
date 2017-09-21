@@ -1,14 +1,22 @@
 package org.moebelApp.com;
 
+import java.io.File;
+import java.io.FileReader;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Properties;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Common extends Base {
 
-	
+	protected static FileReader reader;
+	protected static Properties properties;
 
 	public void clickByID(String id) {
 
@@ -108,5 +116,34 @@ public class Common extends Base {
 		calendar.setTimeInMillis(millis);
 		return calendar.getTime();
 	}
-
+	
+	
+	public static String getConfigValue(String key){
+		String val=null;
+		try {
+			reader = new FileReader("configMobile.properties");
+			properties = new Properties();
+			properties.load(reader);
+			val = properties.getProperty(key);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return val;
+	}
+	public static String getscreenshot(WebDriver driver,String screenshotName)
+    {    
+		String filePath=null;
+		try{
+            File scrnFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            filePath  = "E:\\workspace\\HomeSofaMobile\\ScreenshotsMobile\\"+screenshotName+".png";
+            FileUtils.copyFile(scrnFile, new File(filePath));
+            
+    }catch(Exception e){
+    	   e.printStackTrace();
+    }
+    
+	return filePath;
+    }
 }

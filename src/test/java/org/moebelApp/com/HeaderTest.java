@@ -35,7 +35,8 @@ public class HeaderTest extends Base {
 	
 	@Test
 	public void LoginVerifyTest() throws Exception{
-		Header.ProfileIconclick();
+		Header.ProfileIconclick();		
+		driver.hideKeyboard();
 		Header.LoginButtonclick();
 		Header.LoginVerify();
 		Header.LoginButtonclick();

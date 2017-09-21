@@ -3,6 +3,8 @@ package moebelApp;
 import org.moebelApp.com.Base;
 import org.moebelApp.com.Common;
 
+import io.appium.java_client.android.AndroidKeyCode;
+
 public class Header extends Base {
 	
 	
@@ -53,10 +55,13 @@ public static void LoginButtonclick(){
 	
 	
 	public static void LoginVerify() throws Exception{
+		cmn.waitAMoment(1000);
 		cmn.sendKeysEvent(loginEmailBox, "ishan@mailinator.com");
 		cmn.waitAMoment(1000);
-		cmn.sendKeysEvent(loginpasswordBox, "123456");		
-		cmn.clickByID(loginbutton);		
+		cmn.sendKeysEvent(loginpasswordBox, "123456");
+	    driver.hideKeyboard();
+		cmn.waitAMoment(1000);
+			
 				
 	}
 	
