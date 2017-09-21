@@ -1,5 +1,7 @@
 package org.moebelApp.com;
 
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -98,6 +100,13 @@ public class Common extends Base {
 	public void swipeEvent(int stX, int stY, int endX, int endY, int time) {
 		driver.swipe(stX, stY, endX, endY, time);
 
+	}
+	
+	
+	public Date getTime(long millis) {
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTimeInMillis(millis);
+		return calendar.getTime();
 	}
 
 }

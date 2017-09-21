@@ -27,9 +27,18 @@ public class HeaderTest extends Base {
 	}*/
 	
 	
-	@Test
-	public void loginVerifyTest() throws Exception{	
-		Header.loginIconclick();
+	/*@Test
+	public void ResiterVerifyTest() throws Exception{	
+		Header.ProfileIconclick();
 		Header.RegisterVerify();
+	}*/
+	
+	@Test
+	public void LoginVerifyTest() throws Exception{
+		Header.ProfileIconclick();
+		Header.LoginButtonclick();
+		Header.LoginVerify();
+		Header.LoginButtonclick();
 	}
+	
 }

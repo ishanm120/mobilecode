@@ -14,7 +14,8 @@ public class Header extends Base {
 	static String tcBox = "moebel.de:id/tc_box";
 	static String registerbutton= "moebel.de:id/registration_button";
 	static String facebookbutton= "moebel.de:id/facebook_button";
-	static String loginbutton= "moebel.de:id/login_button";	
+	static String loginbutton= "moebel.de:id/login_button";
+	
 	static String loginEmailBox= "moebel.de:id/login_email";
 	static String loginpasswordBox= "moebel.de:id/login_password";
 	
@@ -31,7 +32,7 @@ public class Header extends Base {
 
 	}
 	
-	public static void loginIconclick(){
+	public static void ProfileIconclick(){
 		
 		cmn.clickByID(profileIcon);
 	}
@@ -41,9 +42,21 @@ public class Header extends Base {
 		cmn.waitAMoment(1000);
 		cmn.sendKeysEvent(passwordBoxReg, "123456");
 		cmn.clickByID(tcBox);
-		cmn.clickByID(registerbutton);
+		cmn.clickByID(registerbutton);		
+				
+	}
+	
+public static void LoginButtonclick(){
 		
-		
+		cmn.clickByID(loginbutton);
+	}
+	
+	
+	public static void LoginVerify() throws Exception{
+		cmn.sendKeysEvent(loginEmailBox, "ishan@mailinator.com");
+		cmn.waitAMoment(1000);
+		cmn.sendKeysEvent(loginpasswordBox, "123456");		
+		cmn.clickByID(loginbutton);		
 				
 	}
 	

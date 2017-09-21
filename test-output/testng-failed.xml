@@ -6,7 +6,7 @@
       <class name="org.moebelApp.com.HeaderTest">
         <methods>
           <include name="closeApp"/>
-          <include name="loginVerifyTest"/>
+          <include name="LoginVerifyTest"/>
           <include name="AppLaunchMethod"/>
         </methods>
       </class> <!-- org.moebelApp.com.HeaderTest -->
